@@ -7,6 +7,7 @@ import ProductList from '../components/ProductList'
 import { IProduct } from '../components/Product'
 import { GetStaticProps } from 'next'
 import iphone from "../public/iphone.png"
+
 interface IProductListProps {
   products: IProduct[]
 }
@@ -26,8 +27,8 @@ export default function Home({ products }: IProductListProps) {
         <ProductList products={products} />
         <Contact />
       </main>
+      <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js" />
       <div hidden id="snipcart" data-api-key="OWNlZTNlYmItZTU5OS00MmI4LThjOTAtMjY0NzAyYmI2ODAxNjM3NjIyMjY3MDMxMTIzMzUx"></div>
-
     </div>
 
 
@@ -37,7 +38,7 @@ export default function Home({ products }: IProductListProps) {
 export const products: IProduct[] = [
   {
     id: "1",
-    name: "iphone X",
+    name: "iPhone X",
     price: 300,
     description: "Superbe iPhone comme neuf ;)",
     url: '/api/products/iphonex',
@@ -45,7 +46,7 @@ export const products: IProduct[] = [
   },
   {
     id: "2",
-    name: "iphone XS",
+    name: "iPhone XS",
     price: 300,
     description: "Superbe iPhone XS comme neuf ;)",
     url: '/api/products/iphonexs',
@@ -53,7 +54,7 @@ export const products: IProduct[] = [
   },
   {
     id: "3",
-    name: "iphone XR",
+    name: "iPhone XR",
     price: 300,
     description: "Superbe iPhone XR comme neuf ;)",
     url: '/api/products/iphonexr',
